@@ -1,0 +1,60 @@
+
+version: 2
+
+models:
+    - name: my_first_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: my_second_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+    
+    - name: snowflake_customer_purchases
+      description: "A starter dbt model"
+      columns:
+          - name: c_custkey
+            description: "Total Purchases in the table"
+            tests:
+                - unique
+                - not_null
+    
+    - name: cumulative_orders_by_date
+      description: "A starter dbt model"
+      columns:
+          - name: O_ORDERDATE
+            description: "Total Purchases in the table"
+            tests:
+                - unique
+                - not_null 
+
+    - name: incremental_time
+      description: "A starter dbt model"
+      columns:
+          - name: t_time
+            description: "Total Purchases in the table"
+            tests:
+                - unique
+                - not_null
+    - name: playing_test_tests
+      description: "A starter dbt model"
+      columns:
+          - name: c_mktsegment
+            description: "Total Purchases in the table"
+            tests:
+                - unique
+                - not_null
+                - accepted_values:
+                    values: ["BUILDING","AUTOMOBILE","MACHINERY","HOUSEHOLD","FURNITURE"]
+                    quotes: false
+    
